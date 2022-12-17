@@ -67,22 +67,22 @@ FOOTER
 				
 				<h5>
 					
-					<i class="fa fa-phone-square" aria-hidden="true"></i> (555) 555-55-55
+					<i class="fa fa-phone-square" aria-hidden="true"></i> +57 (324) 6374233
 
 					<br><br>
 
-					<i class="fa fa-envelope" aria-hidden="true"></i> soporte@tiendavirtual.com
+					<i class="fa fa-envelope" aria-hidden="true"></i> comercial@tjdatagroup.com
 
 					<br><br>
 
-					<i class="fa fa-map-marker" aria-hidden="true"></i> Calle 45F 82 - 31 Local 102
+					<i class="fa fa-map-marker" aria-hidden="true"></i> Cra 2b #30c sur-03 
 
 					<br><br>
-					Medellín | Colombia
+					Bogotá | Cundinamarca | Colombia
 
 				</h5>
 
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.061210342917!2d-75.60279258568647!3d6.255666795471985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429739f2122e9%3A0x4812b922f0ad8f18!2sCl.+45f+%2382-31%2C+Medell%C3%ADn%2C+Antioquia!5e0!3m2!1ses!2sco!4v1511900955540" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>	
+				<iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d591.2091013513631!2d-74.09434903386673!3d4.564357759223463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d4.5645715!2d-74.0942176!5e0!3m2!1ses-419!2sco!4v1670877158145!5m2!1ses-419!2sco" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>	
 
 			</div>
 
@@ -140,7 +140,7 @@ FINAL
 			
 			<div class="col-sm-6 col-xs-12 text-left text-muted">
 				
-				<h5>&copy; 2017 Todos los derechos reservados. Sitio elaborado por la Compañía</h5>
+				<h5>&copy; 2022 Todos los derechos reservados. Sitio elaborado por TJDataGroup SAS.</h5>
 
 			</div>
 

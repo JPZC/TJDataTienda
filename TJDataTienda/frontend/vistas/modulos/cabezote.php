@@ -308,7 +308,7 @@ HEADER
 				
 				</a>	
 
-				<p>TU CESTA <span class="cantidadCesta"></span> <br> USD $ <span class="sumaCesta"></span></p>	
+				<p><b>TU CARRITO</b> <span class="cantidadCesta"></span> <br> $<span class="sumaCesta"></span> COP</p>	
 
 			</div>
 
@@ -465,6 +465,7 @@ VENTANA MODAL PARA EL REGISTRO
 				https://www.iubenda.com/ CONDICIONES DE USO Y POLÍTICAS DE PRIVACIDAD
 				======================================-->
 
+
 				<div class="checkBox">
 					
 					<label>
@@ -473,11 +474,10 @@ VENTANA MODAL PARA EL REGISTRO
 					
 							<small>
 								
-								Al registrarse, usted acepta nuestras condiciones de uso y políticas de privacidad
+								Al registrarse, usted acepta nuestras <!-- Trigger/Open The modale -->
+								<a href="#modalTerminos" data-toggle="modal">condiciones de uso y políticas de privacidad</a>
 
 								<br>
-
-								<a href="//www.iubenda.com/privacy-policy/8146355" class="iubenda-white iubenda-embed" title="condiciones de uso y políticas de privacidad">Leer más</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 
 							</small>
 
@@ -511,6 +511,7 @@ VENTANA MODAL PARA EL REGISTRO
 <!--=====================================
 VENTANA MODAL PARA EL INGRESO
 ======================================-->
+			
 
 <div class="modal fade modalFormulario" id="modalIngreso" role="dialog">
 
@@ -686,6 +687,36 @@ VENTANA MODAL PARA OLVIDO DE CONTRASEÑA
 
 </div>
 
+<!--=====================================
+VENTANA MODAL PARA TERMINOS Y CONDICIONES
+======================================-->
+
+<div class="modal fade modalFormulario" id="modalTerminos" role="dialog">
+
+    <div class="modal-content modal-dialog">
+
+        <div class="modal-body modalTitulo">
+
+        	<h3 class="backColor">TERMINOS Y CONDICIONES</h3>
+
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        	
+			<div class="conpad">
+				
+				Autorizo en forma previa, expresa e informada, como Titular de los datos personales comunicados a TJDataGroup SAS (la “Compañía”), con NIT. 901496047-2, así como a todas sus Unidades de Negocio enunciadas en su Política de Privacidad, el tratamiento de mis datos personales para: (i) cumplir y hacer cumplir las obligaciones entre la Compañía y el titular del dato, tales como de garantía y servicio posventa, entre otras; (ii) comunicar información publicitaria y de mercadeo sobre los productos y servicios que ofrece, intermedia o comercializa la Compañía, a través de medios físicos, digitales y de nuevas tecnologías de la información, tales como redes sociales, mensajería instantánea y/o plataformas virtuales asociadas a los datos personales que comunico (como correo electrónico y número celular); (iii) evaluar preferencias, experiencias sobre productos y hábitos de consumo; (iv) entregar información a fabricantes y/o importadores sobre los productos adquiridos para análisis de calidad; (v) fidelizar clientes; (vi) realizar acciones de inteligencia de negocios, prospectiva de clientes y tendencias de mercado. Los datos personales serán gestionados de forma segura y algunos tratamientos podrán ser realizados de manera directa o a través de encargados, quienes podrán estar domiciliados dentro o fuera de Colombia, en Europa y en países tales como los Estados Unidos, entre otros. El tratamiento de los datos personales por parte de la Compañía se realizará dando cumplimiento a la Política de Privacidad y Protección de Datos personales, publicada en www.tjdatagroup.com. El titular de los datos personales tiene derecho a (i) conocer, actualizar y rectificar sus datos sobre información parcial, inexacta, incompleta, fraccionada o que induzca al error; (ii) solicitar prueba de esta autorización; (iii) ser informado(a) sobre el Tratamiento dado a sus datos; (iv) presentar quejas a la Superintendencia de Industria y Comercio; (v) revocar la autorización y solicitar la supresión de los datos suministrados en los términos de la Ley 1581 de 2012; (vi) acceder gratuitamente a los datos objeto de Tratamiento. Estos derechos podrán ser ejercidos a través de los siguientes canales: (i) Cra 2b #30c sur-03, Bogotá; (ii) comercial@tjdatagroup.com. Asimismo, declaro que en caso tal de encontrarme suministrando información de un tercero, he obtenido de manera previa su consentimiento para la comunicación de sus datos personales a la Compañía.
+				
+			</div>
+			
+			<br>
+			<center>
+			<input type="submit" class="btn btn-default backColor" value="CERRAR TERMINOS Y CONDICIONES" data-dismiss="modal">	
+			</center>
+        </div>
+
+      
+    </div>
+
+</div>
 
 
 

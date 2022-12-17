@@ -1,5 +1,8 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 class ControladorUsuarios{
 
 	/*=============================================
@@ -57,9 +60,9 @@ class ControladorUsuarios{
 
 					$mail->isMail();
 
-					$mail->setFrom('cursos@tutorialesatualcance.com', 'Tutoriales a tu Alcance');
+					$mail->setFrom('comercial@tjdatagroup.com', 'Verificador de Correo');
 
-					$mail->addReplyTo('cursos@tutorialesatualcance.com', 'Tutoriales a tu Alcance');
+					$mail->addReplyTo('comercial@tjdatagroup.com', 'Verificador de Correo');
 
 					$mail->Subject = "Por favor verifique su dirección de correo electrónico";
 

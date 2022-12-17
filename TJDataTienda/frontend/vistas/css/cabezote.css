@@ -91,6 +91,10 @@ header #categorias hr{
 /*=============================================
 VENTANAS MODALES
 =============================================*/
+.conpad {
+	padding-left: 10%;
+	padding-right: 10%;
+}
 
 .modalTitulo{
 	padding:5px 0px;

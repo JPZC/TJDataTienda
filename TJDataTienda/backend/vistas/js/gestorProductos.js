@@ -669,13 +669,9 @@ function agregarMiProducto(imagen){
 		       				"Acceso": $(".detalleAcceso").val(),
 		       				"Dispositivo": $(".detalleDispositivo").val(),
 		   					"Certificado": $(".detalleCertificado").val()};
-		}else{
-
-			var detalles = {"Referencia": $(".detalleTalla").tagsinput('items'),
-			       			"Color": $(".detalleColor").tagsinput('items'),
-			       			"Marca": $(".detalleMarca").tagsinput('items')};
-
 		}
+
+		
 
 		var detallesString = JSON.stringify(detalles);
 

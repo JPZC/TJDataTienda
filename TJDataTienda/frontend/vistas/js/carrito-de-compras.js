@@ -212,35 +212,7 @@ $(".agregarCarrito").click(function(){
 
 	}else{
 
-		var seleccionarDetalle = $(".seleccionarDetalle");
-		
-		for(var i = 0; i < seleccionarDetalle.length; i++){
-
-			console.log("seleccionarDetalle", $(seleccionarDetalle[i]).val());
-
-			if($(seleccionarDetalle[i]).val() == ""){
-
-				swal({
-					  title: "Debe seleccionar Talla y Color",
-					  text: "",
-					  type: "warning",
-					  showCancelButton: false,
-					  confirmButtonColor: "#DD6B55",
-					  confirmButtonText: "¡Seleccionar!",
-					  closeOnConfirm: false
-					})
-
-				return;
-
-			}else{
-
-				titulo = titulo + "-" + $(seleccionarDetalle[i]).val();
-
-				agregarAlCarrito = true;
-
-			}
-
-		}		
+		agregarAlCarrito = true;
 
 	}
 
@@ -1135,6 +1107,77 @@ function pagarConPayu(){
 	  })
 	}
 }
+
+/*=============================================
+BOTÓN PAGAR PAYPAL
+=============================================*/
+
+$(".btnPagoDirecto").click(function(){
+
+	var tipo = $(this).attr("tipo");
+
+	if(tipo == "fisico" && $("#seleccionarPais").val() == ""){
+
+		$(".btnPagoDirecto").after('<div class="alert alert-warning">No ha seleccionado el país de envío</div>');
+
+		return;
+
+	}
+
+	var divisa = $("#cambiarDivisa").val();
+	var total = $(".valorTotalCompra").html();
+	var totalEncriptado = localStorage.getItem("total");
+	var impuesto = $(".valorTotalImpuesto").html();
+	var envio = $(".valorTotalEnvio").html();
+	var subtotal = $(".valorSubtotal").html();
+	var titulo = $(".valorTitulo");
+	var cantidad = $(".valorCantidad");
+	var valorItem = $(".valorItem");
+	var idProducto = $('.cuerpoCarrito button, .comprarAhora button');
+
+	var tituloArray = [];
+	var cantidadArray = [];
+	var valorItemArray = [];
+	var idProductoArray = [];
+
+	for(var i = 0; i < titulo.length; i++){
+
+		tituloArray[i] = $(titulo[i]).html();
+		cantidadArray[i] = $(cantidad[i]).html();
+		valorItemArray[i] = $(valorItem[i]).html();
+		idProductoArray[i] = $(idProducto[i]).attr("idProducto");
+
+	}
+
+	var datos = new FormData();
+
+	datos.append("divisa", divisa);
+	datos.append("total",total);
+	datos.append("totalEncriptado",totalEncriptado);
+	datos.append("impuesto",impuesto);
+	datos.append("envio",envio);
+	datos.append("subtotal",subtotal);
+	datos.append("tituloArray",tituloArray);
+	datos.append("cantidadArray",cantidadArray);
+	datos.append("valorItemArray",valorItemArray);
+	datos.append("idProductoArray",idProductoArray);
+
+	$.ajax({
+		 url:rutaOculta+"ajax/carrito.ajax.php",
+		 method:"POST",
+		 data: datos,
+		 cache: false,
+         contentType: false,
+         processData: false,
+         success:function(respuesta){
+         	   	
+               window.location = respuesta;
+
+         }
+
+	})
+
+})
 
 /*=============================================
 /*=============================================

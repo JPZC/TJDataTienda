@@ -114,7 +114,7 @@ for(var i = 0; i < indice.length; i++){
 
 								'<br>'+
 
-								'<p class="precioCarritoCompra text-center">USD $<span>'+precio+'</span></p>'+
+								'<p class="precioCarritoCompra text-center">$<span>'+precio+'</span> COP</p>'+
 
 							'</div>'+
 
@@ -140,7 +140,7 @@ for(var i = 0; i < indice.length; i++){
 
 								'<p class="subTotal'+index+' subtotales">'+
 									
-									'<strong>USD $<span>'+(Number(item.cantidad)*Number(precio))+'</span></strong>'+
+									'<strong>$<span>'+(Number(item.cantidad)*Number(precio))+'</span> COP</strong>'+
 
 								'</p>'+
 
@@ -395,7 +395,7 @@ $(document).on("change", ".cantidadItem", function(){
 	var idProducto = $(this).attr("idProducto");
 	var item = $(this).attr("item");
 
-	$(".subTotal"+item).html('<strong>USD $<span>'+(cantidad*precio)+'</span></strong>');
+	$(".subTotal"+item).html('<strong> $<span>'+(cantidad*precio)+'</span> COP</strong>');
 
 	/*=============================================
 	ACTUALIZAR LA CANTIDAD EN EL LOCALSTORAGE
@@ -463,7 +463,7 @@ function sumaSubtotales(){
 
 	var sumaTotal = arraySumaSubtotales.reduce(sumaArraySubtotales);
 	
-	$(".sumaSubTotal").html('<strong>USD $<span>'+(sumaTotal).toFixed(2)+'</span></strong>');
+	$(".sumaSubTotal").html('<strong>$<span>'+(sumaTotal).toFixed(2)+'</span> COP</strong>');
 
 	$(".sumaCesta").html((sumaTotal).toFixed(2));
 

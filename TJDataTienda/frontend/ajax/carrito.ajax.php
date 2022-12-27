@@ -164,19 +164,14 @@ if(isset($_POST["metodoPago"]) && $_POST["metodoPago"] == "payu"){
 
 		$verificarProductos = ControladorProductos::ctrMostrarInfoProducto($item, $valor);
 
-		$divisa = file_get_contents("http://free.currconv.com/api/v7/convert?q=USD_".$_POST["divisaPayu"]."&compact=ultra&apiKey=a01ebaf9a1c69eb4ff79");
-
-		$jsonDivisa = json_decode($divisa, true);
-
-		$conversion = number_format($jsonDivisa["USD_".$_POST["divisaPayu"]],2);
 
 		if($verificarProductos["precioOferta"] == 0){
 
-			$precio = $verificarProductos["precio"]*$conversion;
+			$precio = $verificarProductos["precio"];
 		
 		}else{
 
-			$precio = $verificarProductos["precioOferta"]*$conversion;
+			$precio = $verificarProductos["precioOferta"];
 
 		}
 

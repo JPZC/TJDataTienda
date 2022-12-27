@@ -127,7 +127,7 @@ TABLA CARRITO DE COMPRAS
 
 					if($_SESSION["validarSesion"] == "ok"){
 
-						echo '<a id="btnCheckout" href="#modalFormaPagos" data-toggle="modal" idUsuario="'.$_SESSION["id"].'"><button class="btn btn-default backColor btn-lg pull-right">REALIZAR PAGO</button></a>';
+						echo '<a id="btnCheckout" href="#modalCheckout" data-toggle="modal" idUsuario="'.$_SESSION["id"].'"><button class="btn btn-default backColor btn-lg pull-right">REALIZAR PAGO</button></a>';
 
 					}
 
@@ -291,33 +291,28 @@ VENTANA MODAL PARA CHECKOUT
 						 </div>
 
 					</div>
-
+				
 					<div class="clearfix"></div>
 
-					<form class="formPayu" style="display:none">
-					 
-						<input name="merchantId" type="hidden" value=""/>
-						<input name="accountId" type="hidden" value=""/>
-						<input name="description" type="hidden" value=""/>
-						<input name="referenceCode" type="hidden" value=""/>	
-						<input name="amount" type="hidden" value=""/>
-						<input name="tax" type="hidden" value=""/>
-						<input name="taxReturnBase" type="hidden" value=""/>
-						<input name="shipmentValue" type="hidden" value=""/>
-						<input name="currency" type="hidden" value=""/>
-						<input name="lng" type="hidden" value="es"/>
-						<input name="confirmationUrl" type="hidden" value="" />
-						<input name="responseUrl" type="hidden" value=""/>
-						<input name="declinedResponseUrl" type="hidden" value=""/>
-						<input name="displayShippingInformation" type="hidden" value=""/>
-						<input name="test" type="hidden" value="" />
-						<input name="signature" type="hidden" value=""/>
-
-					  <input name="Submit" class="btn btn-block btn-lg btn-default backColor" type="submit"  value="PAGAR" >
+					<form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+					  <input name="merchantId" type="hidden" value="985340">
+					  <input name="accountId" type="hidden" value="993457">
+					  <input name="description" type="hidden" value="Test PAYU">
+					  <input name="referenceCode" type="hidden" value="TestPayU">
+					  <input name="amount" type="hidden" value="20000">
+					  <input name="tax" type="hidden" value="3193">
+					  <input name="taxReturnBase" type="hidden" value="16806">
+					  <input name="currency" type="hidden" value="COP">
+					  <input name="signature" type="hidden" value="0ff5fccb56306bcb847bceabe96c883b">
+					  <input name="test" type="hidden" value="1">
+					  <input name="buyerEmail" type="hidden" value="test@test.com">
+					  <input name="responseUrl" type="hidden" value="http://www.test.com/response">
+					  <input name="confirmationUrl" type="hidden" value="http://www.test.com/confirmation">
+					  <input name="Submit" type="submit" value="Enviar">
 					</form>
 					
 					<button class="btn btn-block btn-lg btn-default backColor btnPagar">PAGAR</button>
-
+					
 				</div>
 
 			</div>
@@ -331,7 +326,6 @@ VENTANA MODAL PARA CHECKOUT
 	</div>
 
 </div>
-
 
 <!--=====================================
 VENTANA MODAL PARA PAGOS
